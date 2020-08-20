@@ -1,3 +1,3 @@
 #!/bin/sh
-cd flask-microflask
+cd flask-microservice
 sudo docker-compose up -d
