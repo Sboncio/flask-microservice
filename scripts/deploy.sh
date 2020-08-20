@@ -1,3 +1,3 @@
 #!/bin/sh
-cd microflask
+cd flask-microflask
 sudo docker-compose up -d
