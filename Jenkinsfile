@@ -1,5 +1,10 @@
 pipeline{
     agent any
+
+    environment{
+        ROOT_PASSWORD = credentials("ROOT_PASSWORD")
+    }
+
     stages{
         stage('Install Docker'){
             steps{

@@ -16,10 +16,13 @@ services:
       protocol: tcp
   db:
     image: mysql:8.0.21
+    secrets:
+      root_password:
+        external: true
     command: --default-authentication-plugin=mysql_native_password
     ports:
     - target: 3306
       published: 3306
     environment:
-      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: /run/secrets/root_password
       MYSQL_DATABASE: "db"
